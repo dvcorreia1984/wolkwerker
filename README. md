@@ -1,0 +1,90 @@
+# 🌐 Zimmersoftware Proefkursus – PHP Docker Omgewing
+
+Hierdie projek is ontwerp om jou stap-vir-stap te help leer werk met HTML, CSS en PHP, en hoe om dit te gebruik binne die Zimmersoftware-raamwerk. Jy werk plaaslik op jou rekenaar met Docker of iets soortgelyk, en laai dan jou projek op na die bediener.
+
+---
+
+## 🛠️ Benodighede
+
+- Docker en Docker Compose geïnstalleer ([https://www.docker.com/](https://www.docker.com/))
+- Basiese kennis van terminal/gebruiker-koppelvlak
+- 'n Tekslêer-redigeerder soos Visual Studio Code
+- Toegang tot die bediener (gebruikersnaam/wagwoord word verskaf)
+
+---
+
+## ▶️ Deel 1: Begin plaaslik met Docker
+
+1. **Kloon of kopieer hierdie projekgids**.
+2. **Navigeer na die gids** via terminal:
+   ```bash
+   cd wolkwerker/sessie2
+   ```
+3. **Begin Docker**:
+   ```bash
+   docker-compose up -d
+   ```
+4. **Besoek plaaslike werf in blaaier**:
+   ```
+   http://localhost:8080
+   ```
+
+---
+
+## ☁️ Deel 2: Oplaai na die Zimmersoftware-bediener
+
+Wanneer jy gereed is om jou projek op die regte bediener te toets, volg hierdie stappe:
+
+---
+
+### 🔐 Stap 1: Teken aan op die bediener
+
+Gebruik die volgende opdrag in terminal:
+
+```bash
+ssh wolkwerker@kaapstad-dk1.seuhs.com
+```
+
+> ✉️ Die wagwoord sal deur jou fasiliteerder voorsien word.
+
+---
+
+### 📁 Stap 2: Skep jou persoonlike gids op die bediener
+
+Sodra jy aangemeld is, gebruik:
+
+```bash
+mkdir /clx/wolkwerker/<JOU_NAAM>
+```
+
+> 🔁 **Vervang `<JOU_NAAM>` met jou eie naam** of gebruikers-ID sonder spasies. Byvoorbeeld:
+```bash
+mkdir /clx/trial/piet
+```
+
+Tik dan:
+```bash
+exit
+```
+om weer van die bediener af te sluit.
+
+---
+
+### ⬆️ Stap 3: Laai jou lêers op met SCP
+
+Gebruik `scp` vanaf jou plaaslike rekenaar om die lêers oor te dra:
+
+```bash
+scp src/main.php src/main_h.php wolkwerker@kaapstad-dk1.seuhs.com:/clx/wolkwerker/<JOU_NAAM>
+```
+
+Byvoorbeeld:
+```bash
+scp src/main.php src/main_h.php wolkwerker@kaapstad-dk1.seuhs.com:/clx/trial/piet
+```
+
+As die opdrag slaag, sal jou lêers nou op die bediener beskikbaar wees en deur die Zimmersoftware-stelsel gebruik kan word.
+
+---
+
+● login op https://cloud-rooms.com/af/ met gebruikersnaam “wolkwerker.wolkwerker”
